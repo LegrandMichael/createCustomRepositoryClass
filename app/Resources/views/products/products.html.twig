@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="ui centered grid ui segment">
+    <h1>Liste des produits</h1>
+</div>
+    <table class="ui striped celled table">
+        <thead>
+            <tr class="center aligned">
+                <th>N°</th>
+                <th>Nom</th>
+                <th>Action</th>
+            <tr>
+        </thead>
+        <tbody class="">
+            {% for product in products %}
+                <tr class="center aligned">
+                    <td>{{ product.id }}</td>
+                    <td>{{ product.name }}<td>
+                    <td class="ui button">Modifier</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
+
